@@ -1,5 +1,5 @@
 {% set name = "movement" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/movement-{{ version }}.tar.gz
-  sha256: e1889c3f026b18ccd4ec0a505989c16e5743ce5aff6d33cebab6de8c5ab7e14a
+  sha256: 9e8b15f97eb4b41cc4952add0c9765b24a9e614051a3b6200c8d11806ecb8d3b
 
 build:
   entry_points:
@@ -35,7 +35,6 @@ requirements:
     - shapely
     - sleap-io
     - xarray
-    - scipy <1.17
     - pyyaml
     - pytables >=3.10.1
     - matplotlib-base
@@ -51,7 +50,6 @@ requirements:
     - fsspec
     - qt-niu
     - napari_video >=0.2.13
-    - qt <6
     - loguru
     - pynwb
     - ndx-pose >=0.2.1
