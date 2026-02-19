@@ -1,6 +1,7 @@
 {% set name = "movement" %}
 {% set version = "0.14.0" %}
 {% set python_min = "3.11" %}
+{% set python_max = "3.14" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +16,7 @@ build:
     - movement = movement.cli_entrypoint:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -25,7 +26,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<{{ python_max }}
     - numpy >=2.0
     - pandas
     - h5py
